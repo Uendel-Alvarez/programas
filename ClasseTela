@@ -1,0 +1,32 @@
+import javax.swing.*;
+import java.awt.*;
+public class ClasseTela{
+public static void main(String[]args){
+JFrame tela = new JFrame("Primeira Tela");
+JLabel texto = new JLabel("Frase Incicativa");
+tela.setBounds(100,100,1250,650);
+tela.getContentPane().setBackground(Color.GREEN);
+tela.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+texto.setBounds(50,100,200,100);
+tela.setLayout(null);
+tela.add(texto);
+
+JButton botao = new JButton("APERTE AQUI");
+botao.setBounds(100,200,200,30);
+botao.setBackground(Color.YELLOW);
+botao.setForeground(Color.BLUE);
+botao.setToolTipText("Exemplo de ToolTipText");
+tela.add(botao);
+
+JTextField caixa = new JTextField();
+caixa.setBounds(100, 300, 200, 30);
+caixa.setBackground(Color.WHITE);
+caixa.setForeground(Color.WHITE);
+
+
+tela.add(caixa);
+
+
+
+tela.setVisible(true);
+}}
