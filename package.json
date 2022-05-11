@@ -1,0 +1,18 @@
+{
+  "name": "cap05",
+  "version": "1.0.0",
+  "description": "Exemplo do capítulo 05",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js"
+  },
+  "keywords": [
+    "livro",
+    "node"
+  ],
+  "author": "Ricardo R Lecheta",
+  "license": "ISC"
+
+
+}
