@@ -52,7 +52,7 @@ void inserirDireita(No *no, int valor) {
 }
 
 /*procedimentos de inserção de nos*/
-void inserir(ArvB *arv, int valor) {
+/*void inserir(ArvB *arv, int valor) {
     if(arv->raiz == NULL) {
         No *novo = (No*)malloc(sizeof(No));
         novo->conteudo = valor;
@@ -65,10 +65,10 @@ void inserir(ArvB *arv, int valor) {
         if(valor > arv->raiz->conteudo)
             inserirDireita(arv->raiz, valor);
     }
-}
+}*/
 
 
-No* inserirNovaVersao(No *raiz, int valor) {
+No* inserir(No *raiz, int valor) {
     if(raiz == NULL) {
         No *novo = (No*)malloc(sizeof(No));
         novo->conteudo = valor;
@@ -77,9 +77,9 @@ No* inserirNovaVersao(No *raiz, int valor) {
         return novo;
     } else {
         if(valor < raiz->conteudo)
-            raiz->esquerda = inserirNovaVersao(raiz->esquerda, valor);
+            raiz->esquerda = inserir(raiz->esquerda, valor);
         if(valor > raiz->conteudo)
-            raiz->direita = inserirNovaVersao(raiz->direita, valor);
+            raiz->direita = inserir(raiz->direita, valor);
         return raiz;
     }
 }
@@ -140,7 +140,7 @@ int main() {
         case 1:
             printf("Digite um valor: ");
             scanf("%d", &valor);
-            raiz = inserirNovaVersao(raiz, valor);
+            raiz = inserir(raiz, valor);
             break;
         case 2:
         	printf("\n**Meu RA: 20134547-5**\n");
